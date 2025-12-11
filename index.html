@@ -15,18 +15,36 @@
     
     <main>
         <section class="games-container">
-            <div class="game-card">
-                <h2>Game 1</h2>
-                <p>Click to play</p>
-                <div id="gameScreen1" style="display: none;">
-                    <p>I'm thinking of a number... Can you guess it?</p>
-                    <input type="number" id="guessInput1" placeholder="Enter your guess" min="1" max="100">
-                    <button id="submitBtn1">Check Guess</button>
-                    <p id="feedback1"></p>
-                    <p id="attemptsCounter1">Attempts: 0</p>
-                    <button id="restartBtn1" style="display: none;">Play Again</button>
-                 </div>
-                <button class="play-btn" id="playBtn1" aria-label="Play Game 1">Play</button>
+            <div class="game-card" id="game1-card">
+                <h2>🎯 Number Guessing Game</h2>
+                <p>Guess the secret number between 1-100</p>
+                
+                <!-- Game Start Screen -->
+                <div id="gameStart1" class="game-start">
+                    <button class="play-btn" id="playBtn1" aria-label="Play Game 1">▶ Play Game</button>
+                </div>
+                
+                <!-- Game Screen -->
+                <div id="gameScreen1" style="display: none;" class="game-screen">
+                    <div class="game-info">
+                        <p class="game-instruction">I'm thinking of a number... Can you guess it?</p>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="number" id="guessInput1" placeholder="Enter 1-100" min="1" max="100" class="game-input">
+                        <button id="submitBtn1" class="submit-btn">Check Guess</button>
+                    </div>
+                    
+                    <div class="feedback-area">
+                        <p id="feedback1" class="feedback-message"></p>
+                    </div>
+                    
+                    <div class="game-stats">
+                        <p id="attemptsCounter1" class="attempts">Attempts: <span>0</span></p>
+                    </div>
+                    
+                    <button id="restartBtn1" class="restart-btn" style="display: none;">🔄 Play Again</button>
+                </div>
             </div>
             
             <div class="game-card">

@@ -94,6 +94,147 @@ main {
     transform: scale(0.98);
 }
 
+/* Game 1 Specific Styles */
+#game1-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.game-start {
+    padding: 2rem 0;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.game-screen {
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-instruction {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-input {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-input:focus {
+    outline: none;
+    border-color: #7c133b;
+    box-shadow: 0 0 8px rgba(124, 19, 59, 0.3);
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.feedback-area {
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.feedback-message {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    min-width: 250px;
+    text-align: center;
+    color: #333;
+}
+
+.game-stats {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.attempts {
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin: 0;
+}
+
+.restart-btn {
+    background: linear-gradient(135deg, #27ae60 0%, #16a085 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+}
+
+.restart-btn:active {
+    transform: translateY(0);
+}
+
 /* Footer Styles */
 footer {
     background-color: rgba(255, 255, 255, 0.95);

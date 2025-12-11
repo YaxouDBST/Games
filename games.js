@@ -9,13 +9,18 @@ function startGame() {
     attempts = 0;
     
     // Show game screen, hide play button
+    document.getElementById('gameStart1').style.display = 'none';
     document.getElementById('gameScreen1').style.display = 'block';
-    document.getElementById('playBtn1').style.display = 'none';
     
     // Clear input field
     document.getElementById('guessInput1').value = '';
     document.getElementById('feedback1').textContent = '';
+    document.getElementById('feedback1').style.color = '';
     document.getElementById('restartBtn1').style.display = 'none';
+    document.getElementById('attemptsCounter1').querySelector('span').textContent = '0';
+    
+    // Focus on input
+    document.getElementById('guessInput1').focus();
 }
 
 // Function to check the player's guess
@@ -46,20 +51,21 @@ function checkGuess() {
     }
     
     // Update attempts counter
-    document.getElementById('attemptsCounter1').textContent = `Attempts: ${attempts}`;
+    document.getElementById('attemptsCounter1').querySelector('span').textContent = attempts;
     
     // Clear input for next guess
     document.getElementById('guessInput1').value = '';
+    document.getElementById('guessInput1').focus();
 }
 
 // Function to restart the game
 function restartGame() {
     document.getElementById('gameScreen1').style.display = 'none';
-    document.getElementById('playBtn1').style.display = 'block';
+    document.getElementById('gameStart1').style.display = 'block';
     document.getElementById('guessInput1').style.display = 'block';
     document.getElementById('submitBtn1').style.display = 'block';
     document.getElementById('feedback1').textContent = '';
-    document.getElementById('feedback1').style.color = 'black';
+    document.getElementById('feedback1').style.color = '';
 }
 
 // When the page loads, set up the buttons
